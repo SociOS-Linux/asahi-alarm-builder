@@ -2,7 +2,7 @@
 
 set -e
 
-BASE_IMAGE_URL="https://jp.mirror.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz"
+BASE_IMAGE_URL="https://github.com/mikeeq/mbp-fedora/archive/refs/tags/v5.17.6-f36.tar.gz"
 BASE_IMAGE="$(basename "$BASE_IMAGE_URL")"
 
 DL="$PWD/dl"
@@ -43,7 +43,7 @@ mount --bind "$ROOT" "$ROOT"
 cp "$ROOT"/etc/pacman.d/mirrorlist{,.orig}
 
 echo "## Installing keyring package..."
-pacstrap -G "$ROOT" asahilinux-keyring
+pacstrap -G "$ROOT" socioslinux-keyring
 
 run_scripts() {
     group="$1"
