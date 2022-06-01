@@ -101,7 +101,7 @@ make_image() {
     umount "$IMG"
     echo "### Creating EFI system partition tree..."
     mkdir -p "$img/esp/EFI/BOOT"
-    cp "$ROOT"/boot/grub/arm64-efi/core.efi "$img/esp/EFI/BOOT/BOOTAA64.EFI"
+    cp "$ROOT"/boot/grub/x86_64-efi/core.efi "$img/esp/EFI/BOOT/BOOTx86_64.EFI"
     cp -r "$ROOT"/boot/efi/m1n1 "$img/esp/"
     echo "### Compressing..."
     rm -f "$img".zip
