@@ -38,7 +38,7 @@ bsdtar -xpf "$DL/$BASE_IMAGE" -C "$ROOT"
 
 cp -r "$FILES" "$ROOT"
 
-mount "$ROOT" "$ROOT"
+mount -t "$ROOT" "$ROOT"
 
 cp "$ROOT"/etc/pacman.d/mirrorlist{,.orig}
 
